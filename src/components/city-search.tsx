@@ -67,7 +67,7 @@ export function CitySearch() {
             {/* Favorites Section */}
             {favorites.length > 0 && (
               <CommandGroup heading="Favorites">
-                {favorites.map((city) => (
+                {favorites.map((city: { id: string; lat: number; lon: number; name: string; country: string; state?: string }) => (
                   <CommandItem
                     key={city.id}
                     value={`${city.lat}|${city.lon}|${city.name}|${city.country}`}
